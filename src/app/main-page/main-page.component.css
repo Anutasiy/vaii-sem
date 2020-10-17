@@ -1,0 +1,10 @@
+.h1, h1{
+  text-align: center;
+  font-family: Fira Sans,sans-serif;
+  font-weight: bold;
+  color: black;
+}
+
+.main-container {
+  background-color: #ce4a37;
+}

@@ -1,0 +1,14 @@
+.navbar-collapse, .navbar-default{
+  background-color: #ce4a37;
+  color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  color: white;
+
+}

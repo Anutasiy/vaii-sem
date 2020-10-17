@@ -1,0 +1,10 @@
+.navbar-collapse, .navbar-default{
+  background-color: #b94231;
+  color: white;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #e0b7b2;
+}
+
+
