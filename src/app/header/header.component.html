@@ -1,26 +1,34 @@
 
-<nav class="navbar-default">
-  <div class="control-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
-        <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
-      </button>
-      <a routerLink="/" class="navbar-brand">RusJazz</a>
-    </div>
-    <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Učitelia</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" role="button">Kurzy <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Všetky kurzy</a></li>
-            <li><a href="#">Ruský pre začatočnikov</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Cena</a></li>
-        <li><a href="#">Hodnotenia</a></li>
-        <li><a href="#">O nas</a></li>
-      </ul>
-    </div>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-light my-red">
+  <a class="navbar-brand" href="#">RusJaz</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Učitelia <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown ml-auto">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Kurzy
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Všetky kurzy</a>
+          <a class="dropdown-item" href="#">Ruský pre začatočnikov</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Cena</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Hodnotenia</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">O nas</a>
+      </li>
+    </ul>
   </div>
 </nav>

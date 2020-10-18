@@ -1,14 +1,16 @@
-.navbar-collapse, .navbar-default{
-  background-color: #ce4a37;
-  color: white;
-}
 
-.navbar-default .navbar-nav>li>a {
-  color: white;
+/*.navbar-brand {*/
+/*  color: white;*/
+/*}*/
+
+.my-red {
+  background-color: #ce4a37 !important;
   font-weight: bold;
 }
 
-.navbar-brand {
-  color: white;
-
+.collapse navbar-collapse>a{
+  text-align: right;
+  align-content: end;
 }
+
+

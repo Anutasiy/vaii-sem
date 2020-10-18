@@ -2,9 +2,33 @@
   text-align: center;
   font-family: Fira Sans,sans-serif;
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
-.main-container {
-  background-color: #ce4a37;
+h4 {
+  text-align: center;
 }
+
+.jumbotron {
+  background-color: #ce4a37 !important;
+  color: white;
+  border-radius: 40em/15em;
+  border-top-left-radius: 0em !important;
+  border-top-right-radius: 0em !important;
+}
+
+.lead {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.my-button {
+  border-color: orange !important;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+}
+
+
+
+
