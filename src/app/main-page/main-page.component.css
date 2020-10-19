@@ -12,23 +12,41 @@ h4 {
 .jumbotron {
   background-color: #ce4a37 !important;
   color: white;
-  border-radius: 40em/15em;
+  border-radius: 50em/5em;
   border-top-left-radius: 0em !important;
   border-top-right-radius: 0em !important;
 }
 
 .lead {
   text-align: center;
-  margin-top: 50px;
 }
 
 .my-button {
   border-color: orange !important;
   background-color: orange;
-  color: white;
+  color: black;
   font-weight: bold;
+  border-radius: 20em/20em;
+}
+.my-button-place {
+  text-align: center !important;
+
 }
 
+.inline-block {
+  margin-top: 100px;
+  text-align: center;
+  display: inline-block;
+}
 
+@media screen and (max-width:1200px) {
+  .hide-this{
+    display:none;
+  }
+}
 
+.my-people {
+  margin-right: 150px;
+  margin-left: 150px;
+}
 
