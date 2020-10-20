@@ -9,7 +9,7 @@ h4 {
   text-align: center;
 }
 
-.jumbotron {
+.my-top-jumbotron {
   background-color: #ce4a37 !important;
   color: white;
   border-radius: 50em/5em;
@@ -28,6 +28,15 @@ h4 {
   font-weight: bold;
   border-radius: 20em/20em;
 }
+
+.my-button-2 {
+  border-color: #ce4a37 !important;
+  color: #ce4a37;
+  font-weight: bold;
+  border-radius: 20em/20em;
+  margin-top: 80px;
+}
+
 .my-button-place {
   margin-top: 100px;
   text-align: center !important;
