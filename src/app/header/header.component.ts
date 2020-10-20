@@ -1,6 +1,4 @@
 import {Component} from '@angular/core';
-import {$} from 'protractor';
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,6 +7,6 @@ import {$} from 'protractor';
 })
 
 export class HeaderComponent {
-  collapsed = true;
+
 }
 

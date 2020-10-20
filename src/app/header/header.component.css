@@ -12,7 +12,9 @@
   text-align: right;
   align-content: end;
 }
-
+.dropdown:hover>.dropdown-menu {
+  display: block;
+}
 
 /*#navBar {*/
 /*  position: fixed;*/
@@ -28,3 +30,4 @@
 /*  border-radius: 2px;*/
 /*  box-shadow: 0px 1px 10px #999;*/
 /*}*/
+
