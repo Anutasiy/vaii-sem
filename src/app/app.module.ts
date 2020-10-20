@@ -9,6 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
 import { FooterComponent } from './footer/footer.component';
+import {RouterModule, Routes} from '@angular/router';
+import { AboutUsComponent } from './about-us/about-us.component';
+const appRoutes: Routes = [
+  {path: '', component: MainPageComponent},
+  {path: 'about-us', component: AboutUsComponent}
+
+];
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,11 +26,13 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     MainPageComponent,
     TopHeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

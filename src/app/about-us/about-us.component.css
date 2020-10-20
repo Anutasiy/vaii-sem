@@ -1,0 +1,45 @@
+.display-4{
+  text-align: center;
+  font-family: Fira Sans,sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.my-top-jumbotron {
+  background-color: #ce4a37 !important;
+  color: white;
+  border-top-left-radius: 0em !important;
+  border-top-right-radius: 0em !important;
+}
+
+.lead {
+  text-align: center;
+}
+
+
+.my-button {
+  border-color: orange !important;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  border-radius: 20em/20em;
+  margin-top: 20px;
+}
+
+.my-button-2 {
+  border-color: white;
+  color: white;
+  font-weight: bold;
+  border-radius: 20em/20em;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.my-img-about {
+   width: 250px;
+   height: auto;
+ }
+
+.display-6 {
+  margin-top: 30px;
+}
