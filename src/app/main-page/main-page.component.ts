@@ -7,10 +7,7 @@ import {$} from 'protractor';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
-
   constructor() { }
-
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
 }

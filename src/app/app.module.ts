@@ -8,6 +8,7 @@ import { ServersComponent } from './servers/servers.component';
 import { HeaderComponent } from './header/header.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import { TopHeaderComponent } from './top-header/top-header.component';
     ServersComponent,
     HeaderComponent,
     MainPageComponent,
-    TopHeaderComponent
+    TopHeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
