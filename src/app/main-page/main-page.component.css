@@ -29,6 +29,7 @@ h4 {
   border-radius: 20em/20em;
 }
 .my-button-place {
+  margin-top: 100px;
   text-align: center !important;
 
 }
@@ -45,8 +46,11 @@ h4 {
   }
 }
 
-.my-people {
+.my-people-1 {
   margin-right: 150px;
+}
+
+.my-people-2 {
   margin-left: 150px;
 }
 
@@ -54,6 +58,28 @@ h4 {
   text-align: center;
   font-family: Fira Sans,sans-serif;
   font-weight: bold;
+  margin-top: 50px;
 }
 
+.my-reasons {
+  margin-top: 80px;
+}
+
+.my-icon {
+  background-image: url(https://englex.ru/wp-content/themes/englex18/dist/images/sprite/spritesheet-f2866c40cd.png);
+  width: 100px;
+  height: 100px;
+
+}
+.image-teacher {
+  background-position: -220px -110px;
+}
+
+.image-talk {
+  background-position: 0px -110px;
+}
+
+.image-money {
+  background-position: -110px 0px ;
+}
 
