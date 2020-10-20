@@ -34,7 +34,7 @@ h4 {
   color: #ce4a37;
   font-weight: bold;
   border-radius: 20em/20em;
-  margin-top: 80px;
+  margin-top: 30px;
 }
 
 .my-button-place {
@@ -78,7 +78,6 @@ h4 {
   background-image: url(https://englex.ru/wp-content/themes/englex18/dist/images/sprite/spritesheet-f2866c40cd.png);
   width: 100px;
   height: 100px;
-
 }
 .image-teacher {
   background-position: -220px -110px;
@@ -92,3 +91,68 @@ h4 {
   background-position: -110px 0px ;
 }
 
+.my-text-red {
+  color: #ce4a37;
+}
+
+.my-img-teacher {
+  width: 300px;
+  height: auto;
+}
+
+/*fourth part of main page*/
+@media (min-width: 768px) {
+  .form-search .combobox-container,
+  .form-inline .combobox-container {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: top;
+  }
+  .form-search .combobox-container .input-group-addon,
+  .form-inline .combobox-container .input-group-addon {
+    width: auto;
+  }
+}
+
+.combobox-selected .caret {
+  display: none;
+}
+
+
+/* :not doesn't work in IE8 */
+
+.combobox-container:not(.combobox-selected) .glyphicon-remove {
+  display: none;
+}
+
+.typeahead-long {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.control-group.error .combobox-container .add-on {
+  color: #B94A48;
+  border-color: #B94A48;
+}
+
+.control-group.error .combobox-container .caret {
+  border-top-color: #B94A48;
+}
+
+.control-group.warning .combobox-container .add-on {
+  color: #C09853;
+  border-color: #C09853;
+}
+
+.control-group.warning .combobox-container .caret {
+  border-top-color: #C09853;
+}
+
+.control-group.success .combobox-container .add-on {
+  color: #468847;
+  border-color: #468847;
+}
+
+.control-group.success .combobox-container .caret {
+  border-top-color: #468847;
+}

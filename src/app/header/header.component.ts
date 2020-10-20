@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {$} from 'protractor';
 
 @Component({
   selector: 'app-header',
@@ -10,3 +11,4 @@ import {Component} from '@angular/core';
 export class HeaderComponent {
   collapsed = true;
 }
+
