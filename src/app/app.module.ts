@@ -11,9 +11,11 @@ import { TopHeaderComponent } from './top-header/top-header.component';
 import { FooterComponent } from './footer/footer.component';
 import {RouterModule, Routes} from '@angular/router';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactsComponent } from './contacts/contacts.component';
 const appRoutes: Routes = [
   {path: '', component: MainPageComponent},
-  {path: 'about-us', component: AboutUsComponent}
+  {path: 'about-us', component: AboutUsComponent},
+  {path: 'contacts', component: ContactsComponent}
 
 ];
 
@@ -27,7 +29,8 @@ const appRoutes: Routes = [
     MainPageComponent,
     TopHeaderComponent,
     FooterComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,

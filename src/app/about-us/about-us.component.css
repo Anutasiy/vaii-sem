@@ -51,19 +51,17 @@
 
 .my-reason-title {
   margin-top: 30px;
-  margin-left: 30px;
 }
 
-.my-reason-description {
-  margin: 30px;
-}
+/*.my-reason-description {*/
+/*  margin: 30px;*/
+/*}*/
 
 .my-number {
   background-color: #ce4a37;
   color: white;
   font-weight: bold;
   border-radius: 50px;
-  margin-left: 30px;
   text-align: center ;
 }
 
