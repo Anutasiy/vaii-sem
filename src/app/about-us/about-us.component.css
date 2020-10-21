@@ -5,6 +5,10 @@
   color: white;
 }
 
+.my-9 {
+  margin-left: 5% !important;
+}
+
 .my-top-jumbotron {
   background-color: #ce4a37 !important;
   color: white;
@@ -75,10 +79,10 @@
 }
 
 .my-base-info {
-  margin-top: 100px;
-  margin-bottom: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .my-col {
@@ -120,10 +124,10 @@
 }
 
 .reason-wrapper, .base-wrapper, .top-wrapper {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .my-reasons {
