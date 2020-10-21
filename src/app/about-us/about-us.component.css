@@ -66,3 +66,75 @@
   margin-left: 30px;
   text-align: center ;
 }
+
+.section-my-reasons {
+  background-color: #e9ecef;
+}
+
+.media-heading {
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+.my-base-info {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.my-col {
+  padding: 0;
+}
+
+.media-body {
+  text-align: center;
+}
+
+.my-icon {
+  background-size: 100% 100%;
+}
+
+@media screen and (max-width:1000px) {
+  .hide-this{
+    display:none;
+  }
+  /*#reason1*/
+  /*{*/
+  /*  display: inline;*/
+  /*}*/
+}
+
+.reason-number {
+  /*left: -60px;*/
+  border-radius: 50%;
+  /*min-width: 70px;*/
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  margin-right: 15px;
+  background-color: #ce4a37;
+  color: #fff;
+  font-size: 1.875rem;
+  font-family: Fira Sans, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.reason-wrapper, .base-wrapper, .top-wrapper {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.my-reasons {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/*---*/
+.reason-title{
+  color: black;
+  font-size: 35px;
+}
