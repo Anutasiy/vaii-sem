@@ -6,10 +6,10 @@ import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-courses',
-  templateUrl: './courses.component.html',
-  styleUrls: ['./courses.component.css']
+  templateUrl: './courses-add.component.html',
+  styleUrls: ['./courses-add.component.css']
 })
-export class CoursesComponent implements OnInit, OnChanges {
+export class CoursesAddComponent implements OnInit, OnChanges {
 
   constructor(private http: HttpClient) { }
   public course: Course;
@@ -30,16 +30,23 @@ export class CoursesComponent implements OnInit, OnChanges {
     // changes.prop contains the old and the new value...
   }
 
-  onDeleteCourse(id) {
+
+  onCreateCourse(form: NgForm) {
+    const value = form.value;
+    console.log(value.nazov);
+    console.log(value.cena);
+    this.course = new Course(value.nazov, value.cena, 'popis');
     this.http
-      .delete(
-        'http://localhost:8081/courses/' + id
+      .post(
+        'http://localhost:8081/courses',
+        this.course
       )
       .subscribe(responseData => {
         console.log(responseData);
         this.ngOnInit();
       });
   }
+
 }
 
 export class Course {

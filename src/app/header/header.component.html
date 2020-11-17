@@ -17,7 +17,7 @@
           Kurzy
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" routerLink="courses">Všetky kurzy</a>
+          <a class="dropdown-item" href="#">Všetky kurzy</a>
           <a class="dropdown-item" href="#">Ruský pre začatočnikov</a>
           <a class="dropdown-item" href="#">Something else here</a>
         </div>
@@ -30,6 +30,15 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="about-us">O nas</a>
+      </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkAdmin" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Admin
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkAdmin">
+          <a class="dropdown-item" routerLink="courses">Všetky kurzy</a>
+          <a class="dropdown-item" routerLink="coursesAdd">Pridat kurz</a>
+        </div>
       </li>
     </ul>
   </div>
