@@ -3,6 +3,7 @@ import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 // import { CoursesService } from 'courses.service';
 import {NgForm} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-courses',
@@ -11,7 +12,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class CoursesAddComponent implements OnInit, OnChanges {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
   public course: Course;
   // tslint:disable-next-line:ban-types
   public courses: any;
@@ -44,7 +45,7 @@ export class CoursesAddComponent implements OnInit, OnChanges {
       )
       .subscribe(responseData => {
         console.log(responseData);
-        this.ngOnInit();
+        this.router.navigate(['/courses']);
       });
   }
 

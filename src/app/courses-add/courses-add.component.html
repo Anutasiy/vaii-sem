@@ -37,7 +37,7 @@
 <!-- News jumbotron -->
 
 
-<form class="my-form" (ngSubmit)="onCreateCourse(f)" #f="ngForm">
+<form #authForm="ngForm" (ngSubmit)="onCreateCourse(authForm)" class="my-form" (ngSubmit)="onCreateCourse(f)" #f="ngForm">
   <div class="form-group">
     <label for="nazov">Nazov kurza</label>
     <input
@@ -57,14 +57,14 @@
     <label for="cena">Cena</label>
     <input
       type="number"
-      required min="1"
+      required
       class="form-control"
       id="cena"
       placeholder="cena"
       name="cena"
+      min="1" max="5"
       [(ngModel)]="courses.cena"
-      #cena="ngModel"
-    >
+      #cena="ngModel">
     <div class="alert alert-danger" *ngIf="!cena.valid && cena.touched">Prosim zadajte spravnu cenu</div>
   </div>
 
@@ -80,5 +80,5 @@
     >
   </div>
 
-  <button type="submit" class="btn btn-primary" >Pridat kurz</button>
+  <button type="submit" class="btn btn-primary" [disabled]="!authForm.valid">Pridat kurz</button>
 </form>
