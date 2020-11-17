@@ -37,35 +37,33 @@
 <!-- News jumbotron -->
 
 
-<form class="my-form" (ngSubmit)="onCreateCourse(f)" #f="ngForm">
+<form class="my-form" (ngSubmit)="onUpdateCourse(f)" #f="ngForm">
   <div class="form-group">
-    <label for="nazov">Nazov kurza</label>
+    <label for="nazov">Name of course</label>
     <input
       type="text"
-      required minlength="5" maxlength="100"
+      required minlength="1" maxlength="100"
       class="form-control"
       id="nazov"
       placeholder="nazov"
       name="nazov"
+      ngModel
       [(ngModel)]="courses.nazov"
-      #nazov="ngModel"
     >
-    <div class="alert alert-danger" *ngIf="!nazov.valid && nazov.touched">Zadajte názov kurzu!</div>
-  </div>
 
+  </div>
   <div class="form-group">
     <label for="cena">Cena</label>
     <input
       type="number"
-      required min="1"
+      min=1
       class="form-control"
       id="cena"
       placeholder="cena"
       name="cena"
+      ngModel
       [(ngModel)]="courses.cena"
-      #cena="ngModel"
     >
-    <div class="alert alert-danger" *ngIf="!cena.valid && cena.touched">Prosim zadajte spravnu cenu</div>
   </div>
 
   <div class="form-group">
@@ -77,8 +75,8 @@
       placeholder="popis"
       name="popis"
       ngModel
+      [(ngModel)]="courses.popis"
     >
   </div>
-
-  <button type="submit" class="btn btn-primary" >Pridat kurz</button>
+  <button type="submit" class="btn btn-primary" >Ulozit</button>
 </form>

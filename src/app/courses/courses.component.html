@@ -36,49 +36,48 @@
 </div>
 <!-- News jumbotron -->
 
+<h3 class=" my-table-name">Nase Kurzy</h3>
+<!--<table class="table my-table">-->
+<!--  <tbody>-->
+<!--  <td>name</td>-->
+<!--  <td>hhh</td>-->
+<!--  <td>ddd</td>-->
+<!--  <td>ddd</td>-->
+<!--  <ng-container *ngFor="let course of courses">-->
+<!--    <tr>-->
+<!--      <td>{{course.id}}</td>-->
+<!--      <td>{{course.nazov}}</td>-->
+<!--      <td>{{course.cena}}</td>-->
+<!--      <td>{{course.popis}}</td>-->
+<!--      <td><button class="btn btn-danger" (click)="onDeleteCourse(course.id)"> Vymaž </button></td>-->
+<!--    </tr>-->
+<!--  </ng-container>-->
+<!--  </tbody>-->
+<!--</table>-->
 
 <table class="table my-table">
+  <thead>
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Nazov</th>
+    <th scope="col">Cena</th>
+    <th scope="col">Popis</th>
+    <th scope="col">Vymazanie</th>
+    <th scope="col">Editovanie</th>
+  </tr>
+  </thead>
   <tbody>
   <ng-container *ngFor="let course of courses">
     <tr>
+      <td>{{course.id}}</td>
       <td>{{course.nazov}}</td>
       <td>{{course.cena}}</td>
-      <td>{{course.id}}</td>
       <td>{{course.popis}}</td>
-      <td><button class="btn btn-danger" (click)="onDeleteCourse(course.id)"> Vymaž </button></td>
+      <td><button class="btn btn-danger" (click)="onDeleteCourse(course.id)"> Vymazat </button></td>
+      <td><button class="btn btn-success" (click)="updateCourse(course.id)"> Editovat </button></td>
     </tr>
   </ng-container>
   </tbody>
 </table>
 
 
-<!--<form class="my-form" (ngSubmit)="onCreateCourse(f)" #f="ngForm">-->
-<!--  <div class="form-group">-->
-<!--    <label for="nazov">Name of course</label>-->
-<!--    <input-->
-<!--      type="text"-->
-<!--      class="form-control"-->
-<!--      id="nazov"-->
-<!--      placeholder="nazov"-->
-<!--      name="nazov"-->
-<!--      ngModel-->
-<!--    >-->
-
-<!--  </div>-->
-<!--  <div class="form-group">-->
-<!--    <label for="cena">Cena</label>-->
-<!--    <input-->
-<!--      type="number"-->
-<!--      class="form-control"-->
-<!--      id="cena"-->
-<!--      placeholder="cena"-->
-<!--      name="cena"-->
-<!--      ngModel-->
-<!--    >-->
-<!--  </div>-->
-<!--  <div class="form-check">-->
-<!--    <input type="checkbox" class="form-check-input" id="exampleCheck1">-->
-<!--    <label class="form-check-label" for="exampleCheck1">Check me out</label>-->
-<!--  </div>-->
-<!--  <button type="submit" class="btn btn-primary" >Add</button>-->
-<!--</form>-->

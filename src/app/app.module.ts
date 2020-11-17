@@ -14,12 +14,14 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CoursesAddComponent } from './courses-add/courses-add.component';
+import { CoursesUpdateComponent } from './courses-update/courses-update.component';
 const appRoutes: Routes = [
   {path: '', component: MainPageComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contacts', component: ContactsComponent},
   {path: 'courses', component: CoursesComponent},
-  {path: 'coursesAdd', component: CoursesAddComponent}
+  {path: 'coursesAdd', component: CoursesAddComponent},
+  {path: 'coursesUpdate/:id', component: CoursesUpdateComponent}
 ];
 
 
@@ -33,7 +35,8 @@ const appRoutes: Routes = [
     AboutUsComponent,
     ContactsComponent,
     CoursesComponent,
-    CoursesAddComponent
+    CoursesAddComponent,
+    CoursesUpdateComponent
   ],
   imports: [
     BrowserModule,
