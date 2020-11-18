@@ -54,3 +54,7 @@ table {
   width: 80%;
   margin-left: 10%;
 }
+
+.my-button-delete, .my-button-edit  {
+  text-align: center;
+}
