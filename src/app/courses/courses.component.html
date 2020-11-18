@@ -55,12 +55,12 @@
 <!--  </tbody>-->
 <!--</table>-->
 
-<table class="table my-table">
+<table mat-table class="table table-hover my-table">
   <thead>
   <tr>
-    <th scope="col">ID</th>
-    <th scope="col">Nazov</th>
-    <th scope="col">Cena</th>
+    <th scope="col" [appSort]="courses" data-order="desc" data-name="id">ID</th>
+    <th scope="col" [appSort]="courses" data-order="desc" data-name="nazov">Nazov</th>
+    <th scope="col" [appSort]="courses" data-order="desc" data-name="cena">Cena</th>
     <th scope="col">Popis</th>
     <th scope="col">Vymazanie</th>
     <th scope="col">Editovanie</th>

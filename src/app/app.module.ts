@@ -15,6 +15,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CoursesAddComponent } from './courses-add/courses-add.component';
 import { CoursesUpdateComponent } from './courses-update/courses-update.component';
+import { SortDirective } from './directive/sort.directive';
 const appRoutes: Routes = [
   {path: '', component: MainPageComponent},
   {path: 'about-us', component: AboutUsComponent},
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
     ContactsComponent,
     CoursesComponent,
     CoursesAddComponent,
-    CoursesUpdateComponent
+    CoursesUpdateComponent,
+    SortDirective
   ],
   imports: [
     BrowserModule,
