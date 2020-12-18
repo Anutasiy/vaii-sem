@@ -16,13 +16,16 @@ import { CoursesComponent } from './courses/courses.component';
 import { CoursesAddComponent } from './courses-add/courses-add.component';
 import { CoursesUpdateComponent } from './courses-update/courses-update.component';
 import { SortDirective } from './directive/sort.directive';
+import {AuthComponent} from './auth/auth.component';
+
 const appRoutes: Routes = [
   {path: '', component: MainPageComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contacts', component: ContactsComponent},
   {path: 'courses', component: CoursesComponent},
   {path: 'coursesAdd', component: CoursesAddComponent},
-  {path: 'coursesUpdate/:id', component: CoursesUpdateComponent}
+  {path: 'coursesUpdate/:id', component: CoursesUpdateComponent},
+  {path: 'auth', component: AuthComponent}
 ];
 
 
@@ -38,7 +41,8 @@ const appRoutes: Routes = [
     CoursesComponent,
     CoursesAddComponent,
     CoursesUpdateComponent,
-    SortDirective
+    SortDirective,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
