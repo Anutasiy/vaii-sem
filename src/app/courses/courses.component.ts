@@ -1,9 +1,11 @@
 import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-// import { Course } from '../course.model';
-// import { CoursesService } from 'courses.service';
+import { AuthService } from '../shared/services/auth.service';
+
 import {NgForm} from '@angular/forms';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
+import {BehaviorSubject} from 'rxjs';
+import {User} from '../auth/user.model';
 
 @Component({
   selector: 'app-courses',
@@ -12,15 +14,17 @@ import {Router} from '@angular/router';
 })
 export class CoursesComponent implements OnInit, OnChanges {
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, private authService: AuthService) { }
   public course: Course;
-  // tslint:disable-next-line:ban-types
   public courses: any;
-
+  user;
   ngOnInit() {
+    this.authService.user.subscribe(user => this.user = user)
+    console.log(this.user);
     this.http
       .get(
-        'http://localhost:8081/courses'
+        'http://localhost:8081/courses',
+        {headers: new HttpHeaders().set('Authorization', 'Bearer ' + this.user.token)}
       )
       .subscribe(responseData => {
         this.courses = responseData;

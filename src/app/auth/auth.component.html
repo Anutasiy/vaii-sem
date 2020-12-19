@@ -35,7 +35,7 @@
           <div class="spinner-my" *ngIf="isLoading">
             <app-loading-spinner></app-loading-spinner>
           </div>
-          <form #authForm="ngForm" (ngSubmit)="login(authForm)" *ngIf="!isLoading" action="" method="post" name="login">
+          <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading" action="" method="post" name="login">
             <div class="form-group">
               <label for="email">Email address</label>
               <input
@@ -113,7 +113,7 @@
           <div class="spinner-my" *ngIf="isLoading">
             <app-loading-spinner></app-loading-spinner>
           </div>
-        <form #authForm="ngForm" (ngSubmit)="onCreateUser(authForm)" *ngIf="!isLoading" action="#" name="registration">
+        <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading" action="#" name="registration">
           <div class="form-group">
             <label for="email">First Name</label>
             <input

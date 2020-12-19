@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {AuthService} from './shared/services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,11 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
   loadedPosts = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private authService: AuthService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.authService.autoLogin();
+  }
 
 
 }

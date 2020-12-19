@@ -2,7 +2,7 @@ import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 // import { Course } from '../course.model';
 // import { CoursesService } from 'courses.service';
 import {NgForm} from '@angular/forms';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
 
 @Component({
