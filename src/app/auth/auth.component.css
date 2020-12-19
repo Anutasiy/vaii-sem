@@ -67,4 +67,7 @@ form .error {
   color: #ff0000;
 }
 
+.spinner-my {
+  text-align: center;
+}
 /*#second{display:none;}*/

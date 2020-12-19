@@ -29,7 +29,13 @@
               <h1>Login</h1>
             </div>
           </div>
-          <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" action="" method="post" name="login">
+          <div class="alert alert-danger" *ngIf="error">
+            <p>{{ error }}</p>
+          </div>
+          <div class="spinner-my" *ngIf="isLoading">
+            <app-loading-spinner></app-loading-spinner>
+          </div>
+          <form #authForm="ngForm" (ngSubmit)="login(authForm)" *ngIf="!isLoading" action="" method="post" name="login">
             <div class="form-group">
               <label for="email">Email address</label>
               <input
@@ -42,6 +48,7 @@
                 placeholder="Enter email"
                 required
                 email
+
               >
             </div>
             <div class="form-group">
@@ -99,13 +106,20 @@
             <h1 >Signup</h1>
           </div>
         </div>
-        <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" action="#" name="registration">
+
+          <div class="alert alert-danger" *ngIf="error">
+            <p>{{ error }}</p>
+          </div>
+          <div class="spinner-my" *ngIf="isLoading">
+            <app-loading-spinner></app-loading-spinner>
+          </div>
+        <form #authForm="ngForm" (ngSubmit)="onCreateUser(authForm)" *ngIf="!isLoading" action="#" name="registration">
           <div class="form-group">
             <label for="email">First Name</label>
             <input
               type="text"
               ngModel
-              name="firstname"
+              name="name"
               class="form-control"
               id="firstname"
               aria-describedby="emailHelp"
@@ -119,7 +133,7 @@
             <input
               type="text"
               ngModel
-              name="lastname"
+              name="surname"
               class="form-control"
               id="lastname"
               aria-describedby="emailHelp"

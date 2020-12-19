@@ -16,7 +16,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { CoursesAddComponent } from './courses-add/courses-add.component';
 import { CoursesUpdateComponent } from './courses-update/courses-update.component';
 import { SortDirective } from './directive/sort.directive';
-import {AuthComponent} from './auth/auth.component';
+import { AuthComponent } from './auth/auth.component';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 
 const appRoutes: Routes = [
   {path: '', component: MainPageComponent},
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     CoursesAddComponent,
     CoursesUpdateComponent,
     SortDirective,
-    AuthComponent
+    AuthComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
