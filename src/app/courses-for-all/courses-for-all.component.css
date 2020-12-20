@@ -49,6 +49,12 @@ table {
   text-align: center;
 }
 
+@media screen and (max-width:1200px) {
+  .hide-this{
+    display:none;
+  }
+}
+
 .my-img-teacher {
   width: 300px;
   height: auto;

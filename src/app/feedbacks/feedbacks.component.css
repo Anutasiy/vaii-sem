@@ -38,6 +38,7 @@
   text-align: center;
   color: #ce4a37;
   font-weight: bold;
+  margin-top: 5vh;
 }
 
 .my-card{
@@ -47,13 +48,14 @@
 }
 
 .my-feedback{
-  border-style: groove;
-  border-color: #aaaaaa;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 .my-img-user {
   width: 50px;
   height: auto;
 }
+
+
+
 

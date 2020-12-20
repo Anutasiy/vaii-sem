@@ -27,7 +27,7 @@
 <!-- News jumbotron -->
 
 
-<form class="my-form" (ngSubmit)="onUpdateCourse(f)" #f="ngForm">
+<form #authForm="ngForm" class="my-form" (ngSubmit)="onUpdateCourse(f)" #f="ngForm">
   <h3 class="my-form-name">Editovanie kurzu</h3>
   <div class="form-group">
     <label for="nazov">Name of course</label>
@@ -40,12 +40,15 @@
       name="nazov"
       ngModel
       [(ngModel)]="courses.nazov"
+      #nazov="ngModel"
     >
+    <div class="alert alert-danger" *ngIf="!nazov.valid && nazov.touched">Zadajte názov kurzu! Nazov musi Obsahovat minimalne 5 simbolov</div>
   </div>
   <div class="form-group">
     <label for="cena">Cena</label>
     <input
       type="number"
+      required
       min=1
       class="form-control"
       id="cena"
@@ -53,7 +56,8 @@
       name="cena"
       ngModel
       [(ngModel)]="courses.cena"
-    >
+      #cena="ngModel">
+    <div class="alert alert-danger" *ngIf="!cena.valid && cena.touched">Prosim zadajte spravnu cenu(>0)</div>
   </div>
   <div class="form-group">
     <label for="popis">Popis</label>
@@ -67,5 +71,5 @@
       [(ngModel)]="courses.popis"
     >
   </div>
-  <button type="submit" class="btn btn-primary" >Ulozit</button>
+  <button type="submit" class="btn btn-primary my-button" [disabled]="!authForm.valid">Ulozit</button>
 </form>

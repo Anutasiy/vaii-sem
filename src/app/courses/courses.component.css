@@ -11,6 +11,12 @@
 
 }
 
+@media screen and (max-width:1200px) {
+  .hide-this{
+    display:none;
+  }
+}
+
 .my-button {
   border-color: orange !important;
   background-color: orange;

@@ -10,6 +10,7 @@ import {FeedbacksService} from '../shared/services/feedbacks.service';
   styleUrls: ['./feedbacks.component.css']
 })
 export class FeedbacksComponent implements OnInit, OnChanges {
+  isAuthenticated = false;
 
   constructor(
     private http: HttpClient, private router: Router, private authService: AuthService, private feedbacksService: FeedbacksService) { }
@@ -19,7 +20,10 @@ export class FeedbacksComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.authService.user.subscribe(user => this.user = user);
-    console.log(this.user);
+ //   this.userSub = this.authComponent.user.subscribe(user => {
+    this.isAuthenticated = !!this.user;
+
+   // console.log(this.user);
     this.feedbacksService.getAll(this.user).subscribe(responseData => {
       this.feedbacks = responseData;
     });

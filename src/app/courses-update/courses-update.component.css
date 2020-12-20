@@ -40,6 +40,12 @@
   width: 50%;
 }
 
+@media screen and (max-width:1200px) {
+  .hide-this{
+    display:none;
+  }
+}
+
 .my-form-name {
   color: #ce4a37;
   font-weight: bold;

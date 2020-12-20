@@ -35,10 +35,16 @@
     <div class="col-sm-2" >
       <img id="pic" class="my-img-user" src ="../../assets/image-students.png" alt="courses image banner">
       <p class="card-text">Anonim</p>
+
     </div>
     <div class="col-sm-8" >
       <h5  id="name" class="card-title">{{feedback1.nazov}}</h5>
       <p class="card-text">{{feedback1.popis}}</p>
+      <hr>
+
+    </div>
+    <div class="col-sm-2" *ngIf="isAuthenticated && user.role == 'ADMIN'">
+      <td class="my-button-delete"><button class="btn btn-danger" (click)="onDeleteFeedback(feedback1.id)"><i class="fa fa-trash"></i></button></td>
     </div>
   </div>
 </div>
