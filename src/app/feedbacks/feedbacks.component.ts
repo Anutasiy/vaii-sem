@@ -35,7 +35,6 @@ export class FeedbacksComponent implements OnInit, OnChanges {
       this.ngOnInit();
     });
   }
-
 }
 
 export class Feedback {

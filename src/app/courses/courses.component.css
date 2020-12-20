@@ -5,10 +5,6 @@
   color: white;
 }
 
-/*.my-9 {*/
-/*  margin-left: 5% !important;*/
-/*}*/
-
 .my-top-jumbotron {
   background-color: #ce4a37 !important;
   color: white;
@@ -38,10 +34,6 @@
   padding-left: 5%;
 }
 
-.my-table {
-
-}
-
 .my-table-name {
   text-align: center;
   margin-top: 5%;
@@ -50,7 +42,6 @@
 }
 
 table {
-  /*border: 1px solid black;*/
   width: 80%;
   margin-left: 10%;
 }

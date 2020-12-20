@@ -1,11 +1,8 @@
 import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import { AuthService } from '../shared/services/auth.service';
 import { CoursesService } from '../shared/services/courses.service';
-import {NgForm} from '@angular/forms';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
-import {BehaviorSubject} from 'rxjs';
-import {User} from '../auth/user.model';
 
 @Component({
   selector: 'app-courses',

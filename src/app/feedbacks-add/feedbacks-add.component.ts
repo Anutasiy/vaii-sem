@@ -19,7 +19,7 @@ export class FeedbacksAddComponent implements OnInit, OnChanges {
   user;
 
   ngOnInit() {
-    this.authService.user.subscribe(user => this.user = user)
+    this.authService.user.subscribe(user => this.user = user);
     console.log(this.user);
     this.feedbackService.getAll(this.user).subscribe(responseData => {
       this.feedbacks = responseData;
@@ -29,7 +29,6 @@ export class FeedbacksAddComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     // changes.prop contains the old and the new value...
   }
-
 
   onCreateFeedback(form: NgForm) {
     const value = form.value;
@@ -42,7 +41,6 @@ export class FeedbacksAddComponent implements OnInit, OnChanges {
         this.router.navigate(['/feedbacks']);
       });
   }
-
 }
 
 export class Feedback {

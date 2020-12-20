@@ -1,11 +1,7 @@
-import {Component, Injectable, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {NgForm} from '@angular/forms';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
-import { User} from './user.model';
-import {Course} from '../courses-add/courses-add.component';
-import { catchError, tap } from 'rxjs/operators';
-import {BehaviorSubject, Observable, Subject, throwError} from 'rxjs';
+import {Observable} from 'rxjs';
 import { AuthService, AuthResponseData } from '../shared/services/auth.service';
 
 
@@ -15,17 +11,12 @@ import { AuthService, AuthResponseData } from '../shared/services/auth.service';
   styleUrls: ['./auth.component.css']
 })
 
-// @Injectable({providedIn: 'root'})
 export class AuthComponent {
   isLoginMode = true;
   isLoading = false;
   error: string = null;
-  // user = new Subject<UserModel>();
-//  user = new BehaviorSubject<UserModel>(null);
 
   constructor(private authService: AuthService, private router: Router) {}
-
-
 
   onSwitchMode() {
     this.isLoginMode = !this.isLoginMode;

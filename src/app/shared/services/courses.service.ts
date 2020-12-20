@@ -1,11 +1,6 @@
-import {Component, Injectable, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import { AuthService } from '../services/auth.service';
-
-import {NgForm} from '@angular/forms';
-import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
-import {BehaviorSubject, Observable, throwError} from 'rxjs';
-import {catchError} from 'rxjs/operators';
 import {User} from '../../auth/user.model';
 import {Course} from '../../courses-add/courses-add.component';
 
@@ -15,8 +10,6 @@ import {Course} from '../../courses-add/courses-add.component';
 export class CoursesService {
 
   constructor(private http: HttpClient, private router: Router) { }
-  // public course: Course;
-  // public courses: any;
    user;
 
   deleteById(id: bigint, user: User) {
@@ -34,7 +27,6 @@ export class CoursesService {
       return this.http.get('http://localhost:8081/courses'
       );
     }
-
   }
 
   getById(id: bigint, user: User) {

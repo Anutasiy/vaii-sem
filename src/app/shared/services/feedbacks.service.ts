@@ -26,7 +26,6 @@ export class FeedbacksService {
       return this.http.get('http://localhost:8081/feedbacks'
       );
     }
-
   }
 
   getById(id: bigint, user: User) {

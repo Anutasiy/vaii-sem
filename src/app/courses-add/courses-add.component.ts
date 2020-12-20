@@ -1,6 +1,4 @@
 import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-// import { Course } from '../course.model';
-// import { CoursesService } from 'courses.service';
 import {NgForm} from '@angular/forms';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
@@ -12,6 +10,7 @@ import {CoursesService} from '../shared/services/courses.service';
   templateUrl: './courses-add.component.html',
   styleUrls: ['./courses-add.component.css']
 })
+
 export class CoursesAddComponent implements OnInit, OnChanges {
 
   constructor(private http: HttpClient, private router: Router, private authService: AuthService, private courseService: CoursesService) { }
@@ -20,7 +19,7 @@ export class CoursesAddComponent implements OnInit, OnChanges {
   user;
 
   ngOnInit() {
-    this.authService.user.subscribe(user => this.user = user)
+    this.authService.user.subscribe(user => this.user = user);
     console.log(this.user);
     this.courseService.getAll(this.user).subscribe(responseData => {
       this.courses = responseData;
@@ -30,7 +29,6 @@ export class CoursesAddComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges) {
     // changes.prop contains the old and the new value...
   }
-
 
   onCreateCourse(form: NgForm) {
     const value = form.value;
@@ -44,7 +42,6 @@ export class CoursesAddComponent implements OnInit, OnChanges {
         this.router.navigate(['/courses']);
       });
   }
-
 }
 
 export class Course {

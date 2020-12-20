@@ -1,6 +1,4 @@
 import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-// import { Course } from '../course.model';
-// import { CoursesService } from 'courses.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import {NgForm} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
@@ -14,9 +12,15 @@ import {CoursesService} from '../shared/services/courses.service';
 })
 export class CoursesUpdateComponent implements OnInit, OnChanges {
 
-  constructor(private http: HttpClient, private activatedRoute: ActivatedRoute, private router: Router, private authService: AuthService, private courseService: CoursesService) { }
+  constructor(
+    private http: HttpClient,
+    private activatedRoute: ActivatedRoute,
+    private router: Router,
+    private authService: AuthService,
+    private courseService: CoursesService
+  ) { }
+
   public course: Course;
-  // tslint:disable-next-line:ban-types
   public courses: any;
   user;
 
@@ -25,7 +29,7 @@ export class CoursesUpdateComponent implements OnInit, OnChanges {
     const id = this.activatedRoute.snapshot.params.id;
     this.courseService.getById(id, this.user)
       .subscribe(responseData => {
-        console.log(responseData)
+        console.log(responseData);
         this.courses = responseData;
       });
   }
@@ -34,20 +38,13 @@ export class CoursesUpdateComponent implements OnInit, OnChanges {
     // changes.prop contains the old and the new value...
   }
 
-
   onUpdateCourse(form: NgForm) {
-    // const value = form.value;
-    // console.log(value.nazov);
-    // console.log(value.cena);
-    // console.log(value.popis);
-    // this.course = new Course(value.nazov, value.cena, value.popis);
     this.courseService.updateCourse(this.courses, this.user)
       .subscribe(responseData => {
         console.log(responseData);
         this.router.navigate(['/courses']);
       });
   }
-
 }
 
 export class Course {

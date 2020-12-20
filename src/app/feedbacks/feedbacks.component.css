@@ -5,10 +5,6 @@
   color: white;
 }
 
-/*.my-9 {*/
-/*  margin-left: 5% !important;*/
-/*}*/
-
 .my-top-jumbotron {
   background-color: #ce4a37 !important;
   color: white;
@@ -44,11 +40,20 @@
   font-weight: bold;
 }
 
-.my-card {
+.my-card{
   text-align: left;
-  margin-left: 20vw;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
 }
 
-.card-body {
-
+.my-feedback{
+  border-style: groove;
+  border-color: #aaaaaa;
+  margin-bottom: 5px;
 }
+
+.my-img-user {
+  width: 50px;
+  height: auto;
+}
+

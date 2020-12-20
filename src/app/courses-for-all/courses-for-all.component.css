@@ -5,14 +5,9 @@
   color: white;
 }
 
-/*.my-9 {*/
-/*  margin-left: 5% !important;*/
-/*}*/
-
 .my-top-jumbotron {
   background-color: #ce4a37 !important;
   color: white;
-
 }
 
 .my-button {
@@ -38,10 +33,6 @@
   padding-left: 5%;
 }
 
-.my-table {
-
-}
-
 .my-table-name {
   text-align: center;
   margin-top: 5%;
@@ -50,7 +41,6 @@
 }
 
 table {
-  /*border: 1px solid black;*/
   width: 80%;
   margin-left: 10%;
 }
@@ -59,14 +49,11 @@ table {
   text-align: center;
 }
 
-
-
 .my-img-teacher {
   width: 300px;
   height: auto;
   margin-left: 20%;
 }
-
 
 .my-button-2 {
   border-color: #ce4a37 !important;

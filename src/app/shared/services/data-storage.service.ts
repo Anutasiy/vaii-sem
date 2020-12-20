@@ -1,9 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpInterceptor, HttpRequest, HttpHandler, HttpHeaders} from '@angular/common/http';
-import {Router} from '@angular/router';
 import {AuthService} from './auth.service';
-import {map, tap, take, exhaustMap} from 'rxjs/operators';
-import {Course} from '../../courses-update/courses-update.component';
+import {take, exhaustMap} from 'rxjs/operators';
 
 
 @Injectable({ providedIn: 'root' })

@@ -1,38 +1,28 @@
 <!-- News jumbotron -->
 <div class="jumbotron section my-top-jumbotron top-banner">
-
   <!-- Grid row -->
   <div class="row">
-
     <!-- Grid column -->
     <div class="col-md-8  ml-3 mt-3 my-top-text">
-
       <!-- Excerpt -->
       <h1 class="h1 mb-2">Kurzy ruského jazyka</h1>
-
       <h4>Kurzy angličtiny delíme na základné a špeciálne. Odporúčame vám prejsť si tie hlavné. Špeciály sú úplne šité na mieru vašim želaniam.</h4>
-
       <div class="my-button-place">
         <a class="btn btn-lg my-button" href="#" role="button">Skúste zadarmo</a>
-
       </div>
-
     </div>
     <!-- Grid column -->
 
     <!-- Grid column -->
     <div class="col-md-3 offset-md-1 mx-3 my-3 ">
-
       <!-- Featured image -->
       <div class="view overlay">
         <img class="hide-this my-img-about" src ="../../assets/courses-topbar.png" alt="courses image banner">
       </div>
     </div>
     <!-- Grid column -->
-
   </div>
   <!-- Grid row -->
-
 </div>
 <!-- News jumbotron -->
 
@@ -40,13 +30,15 @@
 <div class="card-header">
   Recenizii
 </div>
-
-  <div class="col-sm-8 my-card">
-    <div class="card">
-      <div class="card-body" *ngFor="let feedback1 of this.feedbacks">
-        <h5 class="card-title">{{feedback1.nazov}}</h5>
-        <p class="card-text">{{feedback1.popis}}</p>
-      </div>
+<div class="container my-card">
+  <div class="row my-feedback" *ngFor="let feedback1 of this.feedbacks">
+    <div class="col-sm-2" >
+      <img id="pic" class="my-img-user" src ="../../assets/image-students.png" alt="courses image banner">
+      <p class="card-text">Anonim</p>
+    </div>
+    <div class="col-sm-8" >
+      <h5  id="name" class="card-title">{{feedback1.nazov}}</h5>
+      <p class="card-text">{{feedback1.popis}}</p>
     </div>
   </div>
-
+</div>

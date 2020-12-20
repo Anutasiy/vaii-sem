@@ -11,7 +11,6 @@ import {CoursesService} from '../shared/services/courses.service';
 })
 export class CoursesForAllComponent implements OnInit, OnChanges {
 
-
   constructor(private http: HttpClient, private router: Router, private authService: AuthService, private courseService: CoursesService) { }
   public course: Course;
   public courses: any;
