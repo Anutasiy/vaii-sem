@@ -11,8 +11,8 @@
 .alert-box {
   position: fixed;
   top: 30vh;
-  left: 20vw;
-  width: 60vw;
+  left: 30vw;
+  width: 40vw;
   padding: 16px;
   z-index: 100;
   background: white;
@@ -21,4 +21,17 @@
 
 .alert-box-actions {
   text-align: right;
+}
+
+.my-button {
+  border-color: #ce4a37 !important;
+  color: #ce4a37 !important;
+  font-weight: bold;
+  border-radius: 20em/20em;
+  margin-top: 30px;
+}
+
+.alert-name {
+  color: #ce4a37;
+  font-weight: bold;
 }

@@ -34,7 +34,20 @@ h1,h2,h3{
 }
 
 .mybtn{
-  border-radius:50px;
+  border-color: #ce4a37 !important;
+  color: #ce4a37 !important;
+  font-weight: bold;
+  border-radius: 20em/20em;
+  margin-top: 30px;
+}
+
+.mybtn2{
+  border-color: #ce4a37 !important;
+  background-color: #ce4a37 !important;
+  color: white;
+  font-weight: bold;
+  border-radius: 20em/20em;
+  margin-top: 30px;
 }
 
 .login-or {
