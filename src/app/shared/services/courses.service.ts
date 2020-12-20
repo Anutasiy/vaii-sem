@@ -25,10 +25,16 @@ export class CoursesService {
   }
 
   getAll(user: User) {
-   return this.http.get('http://localhost:8081/courses'
-     , {
-     headers: new HttpHeaders().set('Authorization', 'Bearer ' + user.myToken)}
-     );
+    if (user != null) {
+      return this.http.get('http://localhost:8081/courses'
+        , {
+          headers: new HttpHeaders().set('Authorization', 'Bearer ' + user.myToken)}
+      );
+    } else {
+      return this.http.get('http://localhost:8081/courses'
+      );
+    }
+
   }
 
   getById(id: bigint, user: User) {

@@ -34,9 +34,16 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Cena</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Hodnotenia</a>
+
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" routerLink="feedbacks" id="navbarDropdownMenuLinkHodnotenia" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Hodnotenie
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkHodnotenia" *ngIf="isAuthenticated && user.role == 'USER'">
+          <a class="dropdown-item" routerLink="feedbacksAdd" >Pridat hodnotenie</a>
+        </div>
       </li>
+
       <li class="nav-item">
         <a class="nav-link" routerLink="about-us">O nas</a>
       </li>

@@ -38,7 +38,7 @@ export class AuthService {
         {
           email,
           password,
-          role: 'user',
+          role: 'USER',
           name,
           surname,
           returnSecureToken: true

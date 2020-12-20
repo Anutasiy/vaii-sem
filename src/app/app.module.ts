@@ -21,6 +21,9 @@ import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinne
 import {AuthGuard} from './auth/auth.guard';
 import { CoursesForAllComponent } from './courses-for-all/courses-for-all.component';
 import {AlertComponent} from './shared/alert/alert.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FeedbacksComponent } from './feedbacks/feedbacks.component';
+import { FeedbacksAddComponent } from './feedbacks-add/feedbacks-add.component';
 
 const appRoutes: Routes = [
   {path: '', component: MainPageComponent},
@@ -30,7 +33,9 @@ const appRoutes: Routes = [
   {path: 'coursesAdd', component: CoursesAddComponent, canActivate: [AuthGuard]},
   {path: 'coursesUpdate/:id', component: CoursesUpdateComponent, canActivate: [AuthGuard]},
   {path: 'auth', component: AuthComponent},
-  {path: 'coursesForAll', component: CoursesForAllComponent}
+  {path: 'coursesForAll', component: CoursesForAllComponent},
+  {path: 'feedbacks', component: FeedbacksComponent},
+  {path: 'feedbacksAdd', component: FeedbacksAddComponent}
 ];
 
 
@@ -50,13 +55,16 @@ const appRoutes: Routes = [
     AuthComponent,
     LoadingSpinnerComponent,
     CoursesForAllComponent,
-    AlertComponent
+    AlertComponent,
+    FeedbacksComponent,
+    FeedbacksAddComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

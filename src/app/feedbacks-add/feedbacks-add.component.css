@@ -1,0 +1,52 @@
+.display-4{
+  text-align: center;
+  font-family: Fira Sans,sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+/*.my-9 {*/
+/*  margin-left: 5% !important;*/
+/*}*/
+
+.my-top-jumbotron {
+  background-color: #ce4a37 !important;
+  color: white;
+
+}
+
+.my-button {
+  border-color: orange !important;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  border-radius: 20em/20em;
+  margin-top: 20px;
+}
+
+.my-img-about {
+  width: 450px;
+  height: auto;
+}
+
+.top-banner {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.my-top-text {
+  padding-left: 5%;
+}
+
+.my-form {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 25%;
+  width: 50%;
+}
+
+.my-form-name {
+  color: #ce4a37;
+  font-weight: bold;
+  text-align: center;
+}

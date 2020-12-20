@@ -1,0 +1,74 @@
+<!-- News jumbotron -->
+<div class="jumbotron section my-top-jumbotron top-banner">
+
+  <!-- Grid row -->
+  <div class="row">
+
+    <!-- Grid column -->
+    <div class="col-md-8  ml-3 mt-3 my-top-text">
+
+      <!-- Excerpt -->
+      <h1 class="h1 mb-2">Spätná väzba od našich študentov</h1>
+
+      <h4>Nie sú to iba recenzie práce spoločnosti, sú to úprimné príbehy o tom, ako študenti videli svoje prvé výsledky alebo dosiahli svoje ciele.</h4>
+
+      <div class="my-button-place">
+        <a class="btn btn-lg my-button" href="#" role="button">Skúste zadarmo</a>
+
+      </div>
+
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-md-3 offset-md-1 mx-3 my-3 ">
+
+      <!-- Featured image -->
+      <div class="view overlay">
+        <img class="hide-this my-img-about" src ="../../assets/courses-topbar.png" alt="courses image banner">
+      </div>
+    </div>
+    <!-- Grid column -->
+
+  </div>
+  <!-- Grid row -->
+
+</div>
+<!-- News jumbotron -->
+
+
+<form #authForm="ngForm" (ngSubmit)="onCreateFeedback(authForm)" class="my-form"  #f="ngForm">
+  <h3 class="my-form-name">Pridat recenziu</h3>
+  <div class="form-group">
+    <label for="nazov">Nazov recenzii</label>
+    <input
+      type="text"
+      required minlength="5"
+      class="form-control"
+      id="nazov"
+      placeholder="Napíš názov recenzii"
+      name="nazov"
+      [(ngModel)]="feedbacks.nazov"
+      #nazov="ngModel"
+    >
+    <div class="alert alert-danger" *ngIf="!nazov.valid && nazov.touched">Zadajte názov recenzii! Nazov musi Obsahovat minimalne 5 simbolov</div>
+  </div>
+
+
+  <div class="form-group">
+    <label for="popis">Popis</label>
+    <input
+      type="text"
+      required
+      class="form-control"
+      id="popis"
+      placeholder="Napíš komentár k recenzii"
+      name="popis"
+      [(ngModel)]="feedbacks.popis"
+      #popis="ngModel"
+    >
+    <div class="alert alert-danger" *ngIf="!popis.valid && popis.touched">Zadajte popis k vasej recenzii!</div>
+  </div>
+
+  <button type="submit" class="btn btn-primary my-button" [disabled]="!authForm.valid">Pridat recenziu</button>
+</form>
