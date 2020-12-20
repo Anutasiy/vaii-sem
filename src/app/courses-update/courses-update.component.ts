@@ -4,6 +4,8 @@ import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {NgForm} from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
+import {AuthService} from '../shared/services/auth.service';
+import {CoursesService} from '../shared/services/courses.service';
 
 @Component({
   selector: 'app-courses',
@@ -12,17 +14,16 @@ import {HttpClient} from '@angular/common/http';
 })
 export class CoursesUpdateComponent implements OnInit, OnChanges {
 
-  constructor(private http: HttpClient, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private http: HttpClient, private activatedRoute: ActivatedRoute, private router: Router, private authService: AuthService, private courseService: CoursesService) { }
   public course: Course;
   // tslint:disable-next-line:ban-types
   public courses: any;
+  user;
 
   ngOnInit() {
+    this.authService.user.subscribe(user => this.user = user);
     const id = this.activatedRoute.snapshot.params.id;
-    this.http
-      .get(
-        'http://localhost:8081/courses/' + id
-      )
+    this.courseService.getById(id, this.user)
       .subscribe(responseData => {
         console.log(responseData)
         this.courses = responseData;
@@ -40,11 +41,7 @@ export class CoursesUpdateComponent implements OnInit, OnChanges {
     // console.log(value.cena);
     // console.log(value.popis);
     // this.course = new Course(value.nazov, value.cena, value.popis);
-    this.http
-      .put(
-        'http://localhost:8081/courses',
-        this.courses
-      )
+    this.courseService.updateCourse(this.courses, this.user)
       .subscribe(responseData => {
         console.log(responseData);
         this.router.navigate(['/courses']);

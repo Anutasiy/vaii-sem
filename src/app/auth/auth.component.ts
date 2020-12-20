@@ -49,9 +49,6 @@ export class AuthComponent {
     }
     const email = form.value.email;
     const password = form.value.password;
-    const name = form.value.name;
-    const surname = form.value.surname;
-
     let authObs: Observable<AuthResponseData>;
 
     this.isLoading = true;
@@ -59,6 +56,8 @@ export class AuthComponent {
     if (this.isLoginMode) {
       authObs = this.authService.login(email, password);
     } else {
+      const name = form.value.name;
+      const surname = form.value.surname;
       authObs = this.authService.onCreateUser(email, password, name, surname);
     }
 
@@ -75,6 +74,10 @@ export class AuthComponent {
       }
     );
     form.reset();
+  }
+
+  onHandleError() {
+    this.error = null;
   }
   //
   // onCreateUser(form: NgForm) {
@@ -168,12 +171,12 @@ export class AuthComponent {
   //       });
   // }
 
-  logout() {
-   // this.user.next(null);
-   // this.router.navigate(['']);
-    localStorage.clear();
-
-  }
+  // logout() {
+  //  // this.user.next(null);
+  //  // this.router.navigate(['']);
+  //   localStorage.clear();
+  //
+  // }
 
   // private handleAutentification(email: string, userId: string, token: string, expiresIn: number, role: string) {
   //   const expirationDate = new Date(

@@ -1,6 +1,6 @@
 import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import { AuthService } from '../shared/services/auth.service';
-
+import { CoursesService } from '../shared/services/courses.service';
 import {NgForm} from '@angular/forms';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Router} from '@angular/router';
@@ -14,19 +14,15 @@ import {User} from '../auth/user.model';
 })
 export class CoursesComponent implements OnInit, OnChanges {
 
-  constructor(private http: HttpClient, private router: Router, private authService: AuthService) { }
+  constructor(private http: HttpClient, private router: Router, private authService: AuthService, private courseService: CoursesService) { }
   public course: Course;
   public courses: any;
   user;
+
   ngOnInit() {
-    this.authService.user.subscribe(user => this.user = user)
+    this.authService.user.subscribe(user => this.user = user);
     console.log(this.user);
-    this.http
-      .get(
-        'http://localhost:8081/courses',
-        {headers: new HttpHeaders().set('Authorization', 'Bearer ' + this.user.token)}
-      )
-      .subscribe(responseData => {
+    this.courseService.getAll(this.user).subscribe(responseData => {
         this.courses = responseData;
       });
   }
@@ -36,11 +32,7 @@ export class CoursesComponent implements OnInit, OnChanges {
   }
 
   onDeleteCourse(id) {
-    this.http
-      .delete(
-        'http://localhost:8081/courses/' + id
-      )
-      .subscribe(responseData => {
+    this.courseService.deleteById(id, this.user).subscribe(responseData => {
         console.log(responseData);
         this.ngOnInit();
       });

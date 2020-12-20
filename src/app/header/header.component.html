@@ -9,7 +9,7 @@
 
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item dropdown " *ngIf="isAuthenticated">
+      <li class="nav-item dropdown " *ngIf="isAuthenticated && user.role == 'ADMIN'">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkAdmin" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Admin
         </a>
@@ -19,16 +19,16 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Učitelia <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="">Učitelia <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown ">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Kurzy
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Všetky kurzy</a>
+          <a class="dropdown-item" routerLink="coursesForAll">Všetky kurzy</a>
           <a class="dropdown-item" href="#">Ruský pre začatočnikov</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Rusky pre pokrocilych</a>
         </div>
       </li>
       <li class="nav-item">

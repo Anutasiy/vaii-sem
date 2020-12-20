@@ -18,15 +18,19 @@ import { CoursesUpdateComponent } from './courses-update/courses-update.componen
 import { SortDirective } from './directive/sort.directive';
 import { AuthComponent } from './auth/auth.component';
 import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
+import {AuthGuard} from './auth/auth.guard';
+import { CoursesForAllComponent } from './courses-for-all/courses-for-all.component';
+import {AlertComponent} from './shared/alert/alert.component';
 
 const appRoutes: Routes = [
   {path: '', component: MainPageComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'contacts', component: ContactsComponent},
-  {path: 'courses', component: CoursesComponent},
-  {path: 'coursesAdd', component: CoursesAddComponent},
-  {path: 'coursesUpdate/:id', component: CoursesUpdateComponent},
-  {path: 'auth', component: AuthComponent}
+  {path: 'courses', component: CoursesComponent, canActivate: [AuthGuard]},
+  {path: 'coursesAdd', component: CoursesAddComponent, canActivate: [AuthGuard]},
+  {path: 'coursesUpdate/:id', component: CoursesUpdateComponent, canActivate: [AuthGuard]},
+  {path: 'auth', component: AuthComponent},
+  {path: 'coursesForAll', component: CoursesForAllComponent}
 ];
 
 
@@ -44,7 +48,9 @@ const appRoutes: Routes = [
     CoursesUpdateComponent,
     SortDirective,
     AuthComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    CoursesForAllComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,

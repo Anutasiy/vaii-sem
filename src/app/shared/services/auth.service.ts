@@ -186,6 +186,7 @@ export class AuthService {
         errorMessage = 'This password is not correct';
         break;
     }
+    return throwError(errorMessage);
   }
 }
 

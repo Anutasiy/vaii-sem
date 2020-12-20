@@ -1,0 +1,77 @@
+.display-4{
+  text-align: center;
+  font-family: Fira Sans,sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+/*.my-9 {*/
+/*  margin-left: 5% !important;*/
+/*}*/
+
+.my-top-jumbotron {
+  background-color: #ce4a37 !important;
+  color: white;
+
+}
+
+.my-button {
+  border-color: orange !important;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  border-radius: 20em/20em;
+  margin-top: 20px;
+}
+
+.my-img-about {
+  width: 450px;
+  height: auto;
+}
+
+.top-banner {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.my-top-text {
+  padding-left: 5%;
+}
+
+.my-table {
+
+}
+
+.my-table-name {
+  text-align: center;
+  margin-top: 5%;
+  color: #ce4a37;
+  font-weight: bold;
+}
+
+table {
+  /*border: 1px solid black;*/
+  width: 80%;
+  margin-left: 10%;
+}
+
+.my-button-delete, .my-button-edit  {
+  text-align: center;
+}
+
+
+
+.my-img-teacher {
+  width: 300px;
+  height: auto;
+  margin-left: 20%;
+}
+
+
+.my-button-2 {
+  border-color: #ce4a37 !important;
+  color: #ce4a37;
+  font-weight: bold;
+  border-radius: 20em/20em;
+  margin-top: 30px;
+}

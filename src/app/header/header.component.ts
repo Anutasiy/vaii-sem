@@ -12,7 +12,7 @@ import { AuthService } from '../shared/services/auth.service';
 export class HeaderComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
   private userSub: Subscription;
-
+  user;
   constructor(
     private authComponent: AuthService
   ) { }
@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.userSub = this.authComponent.user.subscribe(user => {
       this.isAuthenticated = !!user;
+      this.user = user;
       console.log(!user);
       console.log(!!user);
     });
